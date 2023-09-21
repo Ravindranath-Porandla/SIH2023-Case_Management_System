@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+}
+
+body,html{
+    width: 100%;
+    height: 100vh;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 25px;
+}
+
+button:hover {
+  opacity: 0.8;
+  
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 500px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+
+
+/*NAVIGATION*/
+/* CSS */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  nav {
+    float: right;
+  }
+  .logo{
+    display: flex;
+    float: left;
+  }
+  .logo h1{
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .logo img{
+    margin: 18px;
+    width: 20px;
+  }
+  
+  a {
+    transition: all ease;
+    transition: .6s;
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+  }
+  
+  a:hover {
+    background-color: #eee;
+  }
+  
+  /* Sticky navigation bar */
+  #header.sticky {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
+/*BANNER*/
+.banner-img{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#ffffff39,#ffffff39),url(banner.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+.banner-img h1{
+  margin-left: 18%;
+  text-shadow: 0 0 10px black;
+}
+
+/*ABOUT*/
+#about {
+    padding: 50px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  #about h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #about p {
+    padding: 50px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  
+  /*CONTACT*/
+
+  #contact {
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #contact p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  #contact form {
+    margin-top: 20px;
+  }
+  
+  #contact input,
+  #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  #contact textarea {
+    height: 100px;
+  }
+  
+  #contact button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+/*CASE FILING SECTION*/
+
+  #case-filing {
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #case-filing h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  #case-filing p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  #case-filing form {
+    margin-top: 20px;
+  }
+  
+  #case-filing input,
+  #case-filing select,
+  #case-filing textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  #case-filing textarea {
+    height: 100px;
+  }
+  
+  #case-filing button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+  /*CASE STATISTICS*/
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+
+  .block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+  }
+
+  .block h2 {
+    text-align: center;
+    font-weight: 500;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+  .block .number {
+    font-size: 24px;
+    font-weight: bold;
+
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ccc;
+    font-size: 16px;
+    height: 60px;
+  }
+  
+ 
